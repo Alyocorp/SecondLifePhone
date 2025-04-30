@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">ArtemisPhone</string>
+    <string name="menu_accueil">Accueil</string>
+    <string name="navigation_drawer_open">Ouverture du menu de navigation</string>
+    <string name="navigation_drawer_close">Fermeture du menu de navigation</string>
+    <string name="ariane_accueil">Accueil</string>
+    <string name="authentification">Authentification</string>
+    <string name="nom_utilisateur_2p">Nom d\'utilisateur :</string>
+    <string name="mot_de_passe_2p">Mot de passe :</string>
+    <string name="ok">OK</string>
+    <string name="menu_management">Management</string>
+    <string name="menu_equipements">Equipements</string>
+    <string name="menu_horaires">Horaires</string>
+    <string name="menu_rapports">Rapports</string>
+    <string name="menu_vehicules">Véhicules</string>
+    <string name="menu_application">Application</string>
+    <string name="menu_decheteries">Décheteries</string>
+    <string name="menu_depots_vente">Dépôts-vente</string>
+    <string name="menu_informations">Informations</string>
+    <string name="menu_planning">Planning</string>
+    <string name="menu_rapports_chantiers">Rapports de chantiers</string>
+    <string name="menu_rapports_vehicules">Rapports de véhicules</string>
+    <string name="non_connecte">Non connecté</string>
+    <string name="titre_2p">Titre :</string>
+    <string name="adresse_2p">Adresse :</string>
+    <string name="type_2p">Type :</string>
+    <string name="horaires_2p">Horaires :</string>
+    <string name="barriere_2p">Barrière :</string>
+    <string name="carte_2p">Carte :</string>
+    <string name="blacklist_2p">Blacklist :</string>
+    <string name="latitude_2p">Latitude :</string>
+    <string name="longitude_2p">Longitude :</string>
+    <string name="mettre_a_jour">Mettre à jour</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="compte_2p">Compte :</string>
+    <string name="tarifs_2p">Tarifs :</string>
+    <string name="ariane_dechetteries">Déchetteries</string>
+    <string name="ariane_depots_vente">Dépôts-vente</string>
+    <string name="ariane_equipements">Equipements</string>
+    <string name="equipement_2p">Equipement :</string>
+    <string name="taille_2p">Tailles :</string>
+    <string name="moins">-</string>
+    <string name="plus">+</string>
+    <string name="liste">Liste</string>
+    <string name="demandes">Demandes</string>
+    <string name="croix">X</string>
+    <string name="taille">Taille</string>
+    <string name="quantite">Quantité</string>
+    <string name="possede">Possédé</string>
+    <string name="demande">Demandé</string>
+    <string name="zero">0</string>
+    <string name="possedee">Possédée</string>
+    <string name="demandee">Demandée</string>
+    <string name="liste_equipements">Liste des équipements</string>
+    <string name="demandes_salaries">Demandes salariés</string>
+    <string name="suivi_equipement_fourni">Suivi de l\'équipement fourni</string>
+    <string name="salarie_2p">Salarié :</string>
+    <string name="filtre_2p">Filtre :</string>
+    <string name="mettre_jour">Mettre à jour</string>
+    <string name="cloturer">Cloturer</string>
+    <string name="quantit_possedee_2p">Quantité possédée :</string>
+    <string name="quantit_demandee_2p">Quantité demandée :</string>
+    <string name="equipement">Equipement</string>
+    <string name="salarie">Salarié</string>
+    <string name="ariane_horaires">Horaires</string>
+    <string name="affichage_du_calendrier">Affichage du calendrier</string>
+    <string name="balance_totale_2p">Balance totale :</string>
+    <string name="heure_recup_0">0 : 00</string>
+    <string name="planning_de_la_semaine">Planning de la semaine</string>
+    <string name="planning_synchronise">Planning synchronisé</string>
+    <string name="ariane_planning">Planning</string>
+    <string name="j">J</string>
+    <string name="d_am">D am</string>
+    <string name="f_am">F am</string>
+    <string name="d_pm">D pm</string>
+    <string name="f_pm">F pm</string>
+    <string name="c">C</string>
+    <string name="r">R</string>
+    <string name="a">A</string>
+    <string name="planning_indisponible">Planning indisponible</string>
+    <string name="secteur_2p">Secteur :</string>
+    <string name="affichage_2p">Affichage :</string>
+    <string name="_1_jour">1 jour</string>
+    <string name="_3_jour">3 jours</string>
+    <string name="devis_upper">DEVIS</string>
+    <string name="client_2p">Client :</string>
+    <string name="telephone_2p">Téléphone :</string>
+    <string name="infos_2p">Infos :</string>
+    <string name="intervention_upper">INTERVENTION</string>
+    <string name="x">X</string>
+    <string name="plus_plus">++</string>
+    <string name="middle">|</string>
+    <string name="moins_moins">--</string>
+    <string name="acces">Accès :</string>
+    <string name="tri_2p">Tri :</string>
+    <string name="salubrite_2p">Salubrité :</string>
+    <string name="quantite_2p">Quantité :</string>
+    <string name="volume_2p">Volume :</string>
+    <string name="valeur_2p">Valeur :</string>
+    <string name="total_2p">Total :</string>
+    <string name="remarques_2p">Remarques :</string>
+    <string name="materiel_2p">Materiel :</string>
+    <string name="ouvrir_le_devis">Ouvrir le devis</string>
+    <string name="ariane_rapport">Rapport</string>
+    <string name="u_intervention">Intervention</string>
+    <string name="u_equipe">Equipe</string>
+    <string name="chef_chantier_2p">Chef de chantier :</string>
+    <string name="equipe_2p">Equipe :</string>
+    <string name="u_avant">Avant</string>
+    <string name="controle_kit_2p">Contrôle du kit :</string>
+    <string name="Oui">Oui</string>
+    <string name="Non">Non</string>
+    <string name="devis_reajuste_2p">Devis réajusté :</string>
+    <string name="m_cube">m³</string>
+    <string name="euro">€</string>
+    <string name="photos_avant_2p">Photos avant :</string>
+    <string name="photos_rue_2p">Photos de la rue :</string>
+    <string name="retard_2p">Retard :</string>
+    <string name="client_prevenu_2p">Client prévenu :</string>
+    <string name="pourquoi">Pourquoi ?</string>
+    <string name="u_pendant">Pendant</string>
+    <string name="deterioration_2p">Détérioration :</string>
+    <string name="details_2p">Détails :</string>
+    <string name="depots_vente_2p">Dépôts vente :</string>
+    <string name="depot_vente_2p">Dépôts vente :</string>
+    <string name="montant_2p">Montant :</string>
+    <string name="u_photos">Photos</string>
+    <string name="photos_apres_2p">Photos après :</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="u_journee">Journée</string>
+    <string name="u_fin_chantier">Fin de chantier</string>
+    <string name="raison_2p">Raison :</string>
+    <string name="volumes_traites">Volumes traités</string>
+    <string name="decheterie_particulier_2p">Décheteries particuliers :</string>
+    <string name="decheterie_pro_2p">Décheteries professionnelles :</string>
+    <string name="dib_2p">DIB :</string>
+    <string name="bois_2p">Bois :</string>
+    <string name="ferraille_2p">Ferraille :</string>
+    <string name="papier_2p">Papier :</string>
+    <string name="autres_2p">Autres :</string>
+    <string name="association_2p">Association :</string>
+    <string name="ramene_2p">Ramène :</string>
+    <string name="menage_2p">Ménage :</string>
+    <string name="temps_2p">Temps :</string>
+    <string name="volume_dans_camion_2p">Volumes dans le camion :</string>
+    <string name="decheterie_2p">Décheterie :</string>
+    <string name="respect_consignes_2p">Respect des consignes de sécurité et port des équipements :</string>
+    <string name="reglement_recu_ou_indemnisation_2p">Règlement final reçu ou indemnisation effectuée :</string>
+    <string name="finaliser">Finaliser</string>
+    <string name="bennes_2p">Bennes :</string>
+    <string name="informations_2p">Informations :</string>
+    <string name="accompte_2p">Accompte :</string>
+    <string name="delete">X</string>
+    <string name="devis_signe_2p">Devis signé :</string>
+    <string name="apres_reajustement_2p">Après réajustement :</string>
+    <string name="heures_arrivee_2p">Heure d\'arrivée sur le chantier :</string>
+    <string name="heures_depart_2p">Heure de fin de chantier :</string>
+    <string name="menu_documents">Documents</string>
+    <string name="ariane_documents">Documents</string>
+    <string name="ouvrir">Ouvrir</string>
+    <string name="envoyer">Envoyer</string>
+    <string name="envoyer_e_mail">Envoyer à (e-mail) :</string>
+
+    <string-array name="choix_barriere">
+        <item>Oui</item>
+        <item>Non</item>
+        <item>Inconnu</item>
+    </string-array>
+    <string-array name="choix_blacklist">
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+    <string-array name="choix_carte">
+        <item>Oui</item>
+        <item>Non</item>
+        <item>Inconnu</item>
+    </string-array>
+    <string-array name="choix_compte">
+        <item>Oui</item>
+        <item>Non</item>
+        <item>Inconnu</item>
+    </string-array>
+    <string-array name="choix_type_decheterie">
+        <item>PARTIC</item>
+        <item>PRO</item>
+    </string-array>
+</resources>

@@ -1,0 +1,2136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="64dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btPrevDate"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_bt_previous"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDateDuJour"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btNextDate"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_bt_next"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- region BLOC DETAIL INTERVENTION -->
+
+                <!-- region DETAIL INTERVENTION : TITRE -->
+            <RelativeLayout
+                android:id="@+id/layoutTitleIntervention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/expandable_layout_gradient_grey_title">
+
+                <TextView
+                    android:id="@+id/lb_rapport_intervention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:width="150dp"
+                    android:text="@string/u_intervention"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btShowDetailIntervention"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/affichage_du_calendrier"
+                    android:src="@drawable/ic_bt_drop_up" />
+            </RelativeLayout>
+                <!-- endregion -->
+
+                <!-- region DETAIL INTERVENTION : CONTENU -->
+            <fr.artemis.phone.components.layouts.ExpandableLayout
+                android:id="@+id/expandable_layout_detail_intervention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTitleIntervention"
+                app:el_duration="1000"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- region CLIENT -->
+                    <TextView
+                        android:id="@+id/lb_rapport_client"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/client_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_client_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/lb_rapport_client"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                    <!-- region ADRESSE -->
+                    <TextView
+                        android:id="@+id/lb_rapport_adresse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_client_det"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/adresse_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_adresse_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_client_det"
+                        android:layout_toEndOf="@id/lb_rapport_adresse"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                    <!-- region VOLUME -->
+                    <TextView
+                        android:id="@+id/lb_rapport_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_adresse_det"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/volume_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_volume_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_adresse_det"
+                        android:layout_toEndOf="@id/lb_rapport_volume"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                    <!-- region VALEUR -->
+                    <TextView
+                        android:id="@+id/lb_rapport_valeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_volume_det"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/valeur_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_valeur_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_volume_det"
+                        android:layout_toEndOf="@id/lb_rapport_valeur"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                    <!-- region MONTANT TOTAL -->
+                    <TextView
+                        android:id="@+id/lb_rapport_montant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_valeur_det"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/montant_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_montant_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_valeur_det"
+                        android:layout_toEndOf="@id/lb_rapport_montant"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                    <!-- region ACCOMPTE -->
+                    <TextView
+                        android:id="@+id/lb_rapport_accompte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_montant_det"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/accompte_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_accompte_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_montant_det"
+                        android:layout_toEndOf="@id/lb_rapport_accompte"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                    <!-- region ACCOMPTE -->
+                    <TextView
+                        android:id="@+id/lb_rapport_devis_signe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_accompte"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/devis_signe_2p"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/lb_rapport_devis_signe_det"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_rapport_accompte_det"
+                        android:layout_toEndOf="@id/lb_rapport_devis_signe"
+                        android:minWidth="100dp"
+                        android:textSize="16sp" />
+                    <!-- endregion -->
+
+                </RelativeLayout>
+            </fr.artemis.phone.components.layouts.ExpandableLayout>
+                <!-- endregion -->
+
+            <!-- endregion -->
+
+            <!-- region BLOC PHOTOS -->
+
+                <!-- region PHOTOS : TITRE -->
+            <RelativeLayout
+                android:id="@+id/layoutTitlePhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandable_layout_detail_intervention"
+                android:background="@drawable/expandable_layout_gradient_grey_title">
+
+                <TextView
+                    android:id="@+id/lb_rapport_photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minWidth="100dp"
+                    android:text="@string/u_photos"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btShowDetailPhotos"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/affichage_du_calendrier"
+                    android:src="@drawable/ic_bt_drop_up" />
+            </RelativeLayout>
+                <!-- endregion -->
+
+                <!-- region PHOTOS : CONTENU -->
+            <fr.artemis.phone.components.layouts.ExpandableLayout
+                android:id="@+id/expandable_layout_detail_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTitlePhotos"
+                app:el_duration="1000"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- region PHOTOS AVANT -->
+                    <TextView
+                        android:id="@+id/lb_add_photos_avant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/photos_avant_2p"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bt_add_photos_avant"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@id/lb_add_photos_avant"
+                        android:padding="0px"
+                        android:text="@string/ajouter" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutPhotosAvant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/bt_add_photos_avant"/>
+                    <!-- endregion -->
+
+                    <!-- region PHOTO RUE -->
+                    <TextView
+                        android:id="@+id/lb_add_photos_rue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutPhotosAvant"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/photos_rue_2p"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bt_add_photos_rue"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/layoutPhotosAvant"
+                        android:layout_toEndOf="@id/lb_add_photos_rue"
+                        android:padding="0px"
+                        android:text="@string/ajouter" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutPhotosRue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/bt_add_photos_rue">
+
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region PHOTOS APRES -->
+                    <TextView
+                        android:id="@+id/lb_add_photos_apres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutPhotosRue"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/photos_apres_2p"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/bt_add_photos_apres"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/layoutPhotosRue"
+                        android:layout_toEndOf="@id/lb_add_photos_apres"
+                        android:padding="0px"
+                        android:text="@string/ajouter" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutPhotosApres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/bt_add_photos_apres">
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                </RelativeLayout>
+            </fr.artemis.phone.components.layouts.ExpandableLayout>
+                <!-- endregion -->
+
+            <!-- endregion -->
+
+            <!-- region BLOC AVANT -->
+
+                <!-- region AVANT : TITRE -->
+            <RelativeLayout
+                android:id="@+id/layoutTitleAvant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandable_layout_detail_photos"
+                android:background="@drawable/expandable_layout_gradient_grey_title">
+
+                <TextView
+                    android:id="@+id/lb_rapport_avant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minWidth="100dp"
+                    android:text="@string/u_avant"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btShowDetailAvant"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/affichage_du_calendrier"
+                    android:src="@drawable/ic_bt_drop_up" />
+            </RelativeLayout>
+                <!-- endregion -->
+
+                <!-- region AVANT : CONTENU -->
+            <fr.artemis.phone.components.layouts.ExpandableLayout
+                android:id="@+id/expandable_layout_detail_avant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTitleAvant"
+                app:el_duration="1000"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <!-- region CONTROLE DU KIT -->
+                    <TextView
+                        android:id="@+id/lb_controle_kit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/controle_kit_2p"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_controle_kit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_controle_kit"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_controle_kit_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_controle_kit_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+                    <!-- endregion -->
+
+                    <!-- region DEVIS REAJUSTE -->
+                    <TextView
+                        android:id="@+id/lb_devis_reajuste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_controle_kit"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/devis_reajuste_2p"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_devis_reajuste"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_devis_reajuste"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_devis_reajuste_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_devis_reajuste_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+                        <!-- region DETAILS DE REAJUSTEMENT -->
+                    <LinearLayout
+                        android:id="@+id/layoutDevisReajuste"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_devis_reajuste"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:width="200dp"
+                            android:gravity="start"
+                            android:textSize="16sp"
+                            android:text="@string/apres_reajustement_2p"/>
+
+                            <!-- region VOLUME REAJUSTE -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_volume"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:width="100dp"
+                                android:gravity="start"
+                                android:text="@string/volume_2p"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/et_reajustement_volume"
+                                android:inputType="numberDecimal"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_mcube"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="20dp"
+                                android:text="@string/m_cube"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_volume_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="start"
+                                android:minWidth="80dp"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+                        <!-- endregion -->
+
+                            <!-- region VALEURS REAJUSTEES -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_valeur"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="start"
+                                android:minWidth="100dp"
+                                android:text="@string/valeur_2p"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/et_reajustement_valeur"
+                                android:inputType="numberDecimal"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_euro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:minWidth="20dp"
+                                android:text="@string/euro"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_valeur_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="start"
+                                android:minWidth="80dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                        <!-- endregion -->
+
+                            <!-- region TOTAL REAJUSTE -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:width="100dp"
+                                android:gravity="start"
+                                android:text="@string/total_2p"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/et_reajustement_total"
+                                android:inputType="numberDecimal"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_total_euro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:minWidth="20dp"
+                                android:text="@string/euro"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/lb_devis_reajuste_total_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="start"
+                                android:minWidth="80dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                        <!-- endregion -->
+                    </LinearLayout>
+                    <!-- endregion -->
+                    <!-- endregion -->
+
+                </RelativeLayout>
+            </fr.artemis.phone.components.layouts.ExpandableLayout>
+                <!-- endregion -->
+
+            <!-- endregion -->
+
+            <!-- region BLOC JOURNEE -->
+
+                <!-- region JOURNEE : TITRE -->
+            <RelativeLayout
+                android:id="@+id/layoutTitleJournee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandable_layout_detail_avant"
+                android:background="@drawable/expandable_layout_gradient_grey_title">
+
+                <TextView
+                    android:id="@+id/lb_rapport_journee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:width="150dp"
+                    android:text="@string/u_journee"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btShowDetailJournee"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/affichage_du_calendrier"
+                    android:src="@drawable/ic_bt_drop_up" />
+            </RelativeLayout>
+            <!-- endregion -->
+
+                <!-- region JOURNEE : CONTENU -->
+            <fr.artemis.phone.components.layouts.ExpandableLayout
+                android:id="@+id/expandable_layout_detail_journee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTitleJournee"
+                app:el_duration="1000"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- region CHEF DE CHANTIER -->
+                    <TextView
+                        android:id="@+id/lb_chef_chantier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/chef_chantier_2p"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_chef_chantier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/lb_chef_chantier" />
+                    <!-- endregion -->
+
+                    <!-- region EQUIPE -->
+                    <RelativeLayout
+                        android:id="@+id/layoutEquipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sp_chef_chantier">
+
+                        <LinearLayout
+                            android:id="@+id/layoutEquipeTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lb_equipe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:width="150dp"
+                                android:gravity="start"
+                                android:text="@string/equipe_2p"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/layoutEquipeContent"
+                            android:layout_below="@id/layoutEquipeTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- endregion -->
+
+                    <!-- region RETARD -->
+                    <TextView
+                        android:id="@+id/lb_retard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutEquipe"
+                        android:width="150dp"
+                        android:gravity="start"
+                        android:text="@string/retard_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_retard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_retard"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_retard_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_retard_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutRetard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_retard"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!-- region RETARD - CLIENT PREVENU -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lb_client_prevenu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="150dp"
+                                android:text="@string/client_prevenu_2p"
+                                android:textSize="16sp"/>
+
+                            <RadioGroup
+                                android:id="@+id/rg_retard_client_prevenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_retard_client_prevenu_oui"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:text="@string/Oui"
+                                    android:textSize="16sp"/>
+
+                                <RadioButton
+                                    android:id="@+id/rb_retard_client_prevenu_non"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="50dp"
+                                    android:checked="false"
+                                    android:text="@string/Non"
+                                    android:textSize="16sp"/>
+                            </RadioGroup>
+                        </LinearLayout>
+                        <!-- endregion -->
+
+                        <!-- region RETARD - RAISON -->
+                        <LinearLayout
+                            android:id="@+id/layoutRetardPourquoiPasPrevenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lb_retard_pourquoi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/raison_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_retard_pourquoi_pas_prevenu"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <!-- endregion -->
+
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region heures arrivée/départ -->
+                    <TextView
+                        android:id="@+id/lb_heure_arrivee_chantier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutRetard"
+                        android:gravity="start"
+                        android:text="@string/heures_arrivee_2p"
+                        android:textSize="16sp"/>
+                    <EditText
+                        android:id="@+id/et_heure_arrivee"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:inputType="number"
+                        android:layout_below="@id/lb_heure_arrivee_chantier"/>
+                    <TextView
+                        android:id="@+id/lb_heure_depart_chantier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_heure_arrivee"
+                        android:gravity="start"
+                        android:text="@string/heures_depart_2p"
+                        android:textSize="16sp"/>
+                    <EditText
+                        android:id="@+id/et_heure_depart"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:inputType="number"
+                        android:layout_below="@id/lb_heure_depart_chantier"/>
+
+                    <!-- endregion -->
+
+                    <!-- region DETERIORATION -->
+                    <TextView
+                        android:id="@+id/lb_deterioration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_heure_depart"
+                        android:gravity="start"
+                        android:width="150dp"
+                        android:text="@string/deterioration_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_deterioration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_deterioration"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_deterioration_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_deterioration_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDeterioration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_deterioration"
+                        android:layout_marginStart="20dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_deterioration_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/details_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_deterioration_details"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <TextView
+                        android:id="@+id/lb_volumes_traites"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutDeterioration"
+                        android:gravity="center"
+                        android:text="@string/volumes_traites"
+                        android:textSize="18sp"/>
+
+                    <!-- region DECHETERIES PARTIC -->
+                    <TextView
+                        android:id="@+id/lb_dechet_partic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_volumes_traites"
+                        android:gravity="start"
+                        android:width="250dp"
+                        android:text="@string/decheterie_particulier_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_dechet_partic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_dechet_partic"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_dechet_partic_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_dechet_partic_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDechetPartic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/rg_dechet_partic"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_dechet_partic_volume"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/volume_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_dechet_partic_volume"
+                            android:layout_width="150dp"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/m_cube"/>
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region DECHETERIES PRO -->
+                    <TextView
+                        android:id="@+id/lb_dechet_pro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutDechetPartic"
+                        android:gravity="start"
+                        android:width="250dp"
+                        android:text="@string/decheterie_pro_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_dechet_pro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_dechet_pro"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_dechet_pro_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_dechet_pro_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:id="@+id/layoutDechetPro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_dechet_pro"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/layoutDechetProDib"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_dechet_pro_dib"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/dib_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_dechet_pro_dib_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutDechetProBois"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutDechetProDib"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_dechet_pro_bois"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/bois_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_dechet_pro_bois_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutDechetProFerraille"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutDechetProBois"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_dechet_pro_ferraille"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/ferraille_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_dechet_pro_ferraille_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutDechetProPapier"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutDechetProFerraille"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_dechet_pro_papier"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/papier_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_dechet_pro_papier_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutDechetProAutres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutDechetProPapier"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_dechet_pro_autres"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/autres_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_dechet_pro_autre_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <!-- endregion -->
+
+                    <!-- region BENNES -->
+                    <TextView
+                        android:id="@+id/lb_bennes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutDechetPro"
+                        android:gravity="start"
+                        android:width="250dp"
+                        android:text="@string/bennes_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_bennes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_bennes"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_bennes_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_bennes_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:id="@+id/layoutBennes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_bennes"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/layoutBennesDib"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_bennes_dib"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/dib_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_bennes_dib_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutBennesBois"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutBennesDib"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_bennes_bois"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/bois_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_bennes_bois_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutBennesFerraille"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutBennesBois"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_bennes_ferraille"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/ferraille_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_bennes_ferraille_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutBennesPapier"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutBennesFerraille"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_bennes_papier"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/papier_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_bennes_papier_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutBennesAutres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutBennesPapier"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_bennes_autres"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/autres_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_bennes_autre_volume"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <!-- endregion -->
+
+                    <!-- region DEPOTS VENTE -->
+                    <TextView
+                        android:id="@+id/lb_depot_vente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutBennes"
+                        android:gravity="start"
+                        android:width="150dp"
+                        android:text="@string/depots_vente_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_depot_vente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_depot_vente"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_depot_vente_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_depot_vente_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDepotVente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/rg_depot_vente"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_depot_vente_volume"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/volume_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_depot_vente_volume"
+                            android:layout_width="150dp"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/m_cube"/>
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region ASSOCIATION -->
+                    <TextView
+                        android:id="@+id/lb_association"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutDepotVente"
+                        android:gravity="start"
+                        android:width="150dp"
+                        android:text="@string/association_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_association"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_association"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_association_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_association_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAssociation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/rg_association"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_association_volume"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/volume_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_association_volume"
+                            android:layout_width="150dp"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/m_cube"/>
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region RAMENE -->
+                    <TextView
+                        android:id="@+id/lb_ramene"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutAssociation"
+                        android:gravity="start"
+                        android:width="150dp"
+                        android:text="@string/ramene_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_ramene"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_ramene"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_ramene_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_ramene_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutRamene"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/rg_ramene"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_ramene_volume"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/volume_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_ramene_volume"
+                            android:layout_width="150dp"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/m_cube"/>
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                </RelativeLayout>
+            </fr.artemis.phone.components.layouts.ExpandableLayout>
+                <!-- endregion -->
+
+            <!-- endregion -->
+
+            <!-- region BLOC FIN -->
+
+                <!-- region FIN : TITRE -->
+            <RelativeLayout
+                android:id="@+id/layoutTitleFinChantier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandable_layout_detail_journee"
+                android:background="@drawable/expandable_layout_gradient_grey_title">
+
+                <TextView
+                    android:id="@+id/lb_rapport_fin_chantier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:width="150dp"
+                    android:text="@string/u_fin_chantier"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/btShowDetailFinChantier"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="2dp"
+                    android:contentDescription="@string/affichage_du_calendrier"
+                    android:src="@drawable/ic_bt_drop_up" />
+            </RelativeLayout>
+                <!-- endregion -->
+
+                <!-- region FIN : CONTENU -->
+            <fr.artemis.phone.components.layouts.ExpandableLayout
+                android:id="@+id/expandable_layout_detail_fin_chantier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTitleFinChantier"
+                app:el_duration="1000"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- region FIN : VOLUME CAMION -->
+                    <TextView
+                        android:id="@+id/lb_volume_camion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:width="250dp"
+                        android:text="@string/volume_dans_camion_2p"
+                        android:textSize="16sp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/layoutVolumeCamion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lb_volume_camion">
+
+                        <LinearLayout
+                            android:id="@+id/layoutVolumeCamionRamene"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_volume_camion_ramene"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/ramene_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_volume_camion_ramene"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutVolumeCamionFerraille"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutVolumeCamionRamene"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_volume_camion_ferraille"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/ferraille_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_volume_camion_ferraille"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutVolumeCamionPapier"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutVolumeCamionFerraille"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_volume_camion_papier"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/papier_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_volume_camion_papier"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutVolumeCamionDecheterie"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutVolumeCamionPapier"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/lb_volume_camion_decheterie"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/decheterie_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_volume_camion_decheterie"
+                                android:layout_width="150dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/m_cube"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <!-- endregion -->
+
+                    <!-- region FIN : MENAGE -->
+                    <TextView
+                        android:id="@+id/lb_menage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutVolumeCamion"
+                        android:gravity="start"
+                        android:width="150dp"
+                        android:text="@string/menage_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_menage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_menage"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_menage_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_menage_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutMenage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/rg_menage"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_menage_duree"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/temps_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_meanage_duree"
+                            android:layout_width="150dp"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region FIN : RESPECT CONSIGNES -->
+                    <TextView
+                        android:id="@+id/lb_respect_consignes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutMenage"
+                        android:gravity="start"
+                        android:text="@string/respect_consignes_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_respect_consignes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_respect_consignes"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_respect_consignes_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_respect_consignes_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutRespectConsignes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/rg_respect_consignes"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lb_respect_consignes_details"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:width="100dp"
+                            android:text="@string/details_2p"
+                            android:textSize="16sp"/>
+
+                        <EditText
+                            android:id="@+id/et_respect_consignes_details"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region FIN : REGLEMENTS -->
+                    <TextView
+                        android:id="@+id/lb_reglements"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutRespectConsignes"
+                        android:gravity="start"
+                        android:text="@string/reglement_recu_ou_indemnisation_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_reglement_recu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_reglements"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_reglement_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_reglement_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDetailReglement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_reglement_recu"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/layoutReglements"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lb_reglement_montant"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/montant_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_reglement_montant"
+                                android:layout_width="100dp"
+                                android:inputType="numberDecimal"
+                                android:layout_height="wrap_content" />
+
+                            <TextView android:id="@+id/lb_reglement_montant_restant"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:textSize="16sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/layoutReglementsInfos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/lb_reglement_infos"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:width="100dp"
+                                android:text="@string/informations_2p"
+                                android:textSize="16sp"/>
+
+                            <EditText
+                                android:id="@+id/et_reglement_infos"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                    <!-- region FIN : REMARQUES -->
+                    <TextView
+                        android:id="@+id/lb_remarques"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutDetailReglement"
+                        android:gravity="start"
+                        android:width="150dp"
+                        android:text="@string/remarques_2p"
+                        android:textSize="16sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_remarques"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_remarques"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_remarques_oui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="@string/Oui"
+                            android:textSize="16sp"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_remarques_non"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:checked="false"
+                            android:text="@string/Non"
+                            android:textSize="16sp"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutRemarques"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rg_remarques"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <EditText
+                            android:id="@+id/et_remarques"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <!-- endregion -->
+
+                </RelativeLayout>
+            </fr.artemis.phone.components.layouts.ExpandableLayout>
+
+                    <!-- region FIN : VALIDATION -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandable_layout_detail_fin_chantier">
+                <Button
+                    android:id="@+id/btFinaliserRapportChantier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/finaliser"/>
+            </RelativeLayout>
+                <!-- endregion -->
+
+                <!-- endregion -->
+
+            <!-- endregion -->
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

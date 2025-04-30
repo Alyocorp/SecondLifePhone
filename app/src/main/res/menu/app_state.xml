@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="user_logged"
+        app:actionLayout="@layout/activity_toolbar_user_logged"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bt_log"
+        android:icon="@drawable/ic_login"
+        android:title="log"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/bt_close"
+        android:icon="@drawable/ic_shutdown"
+        android:title="close"
+        app:showAsAction="ifRoom"/>
+</menu>

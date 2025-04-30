@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="64dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btPrevDate"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_bt_previous"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvDateDuJour"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btNextDate"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_bt_next"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btShowCalendar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/affichage_du_calendrier"
+            android:src="@drawable/ic_bt_drop_down" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutCalendarViewUserHoraires"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <CalendarView
+            android:id="@+id/calendarViewUserHoraires"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <TextView
+            android:id="@+id/tvHorairesTitleJour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/j"
+            android:textSize="14sp"
+            android:tooltipText="Jour" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/d_am"
+            android:textSize="14sp"
+            android:tooltipText="Début matin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/f_am"
+            android:textSize="14sp"
+            android:tooltipText="Fin matin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/d_pm"
+            android:textSize="14sp"
+            android:tooltipText="Début après-midi" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/f_pm"
+            android:textSize="14sp"
+            android:tooltipText="Fin après-midi" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/c"
+            android:textSize="14sp"
+            android:tooltipText="Congé" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/r"
+            android:textSize="14sp"
+            android:tooltipText="Récupération" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bordergrey"
+            android:gravity="center"
+            android:text="@string/a"
+            android:textSize="14sp"
+            android:tooltipText="Arrêt" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutBottom"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutHeures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:text="@string/balance_totale_2p" />
+
+            <TextView
+                android:id="@+id/tvBalanceTotale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

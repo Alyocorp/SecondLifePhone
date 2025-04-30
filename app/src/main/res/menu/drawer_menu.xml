@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menuGroupResponsable"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/nav_home_resp"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_accueil" />
+        <item android:title="@string/menu_management">
+            <menu>
+                <item
+                    android:id="@+id/nav_equipements_resp"
+                    android:icon="@drawable/ic_menu_equipements"
+                    android:title="@string/menu_equipements" />
+                <item
+                    android:id="@+id/nav_horaires_resp"
+                    android:icon="@drawable/ic_menu_horaires"
+                    android:title="@string/menu_horaires" />
+                <item
+                    android:id="@+id/nav_rapports_resp"
+                    android:icon="@drawable/ic_menu_rapports"
+                    android:title="@string/menu_rapports" />
+                <item
+                    android:id="@+id/nav_vehicules_resp"
+                    android:icon="@drawable/ic_menu_vehicules"
+                    android:title="@string/menu_vehicules" />
+            </menu>
+        </item>
+        <item android:title="@string/menu_application">
+            <menu>
+                <item
+                    android:id="@+id/nav_decheteries_resp_user"
+                    android:icon="@drawable/ic_menu_decheteries"
+                    android:title="@string/menu_decheteries" />
+                <item
+                    android:id="@+id/nav_depots_vente_resp_user"
+                    android:icon="@drawable/ic_menu_depots_vente"
+                    android:title="@string/menu_depots_vente" />
+                <item
+                    android:id="@+id/nav_documents_resp_user"
+                    android:icon="@drawable/ic_menu_documents"
+                    android:title="@string/menu_documents" />
+                <item
+                    android:id="@+id/nav_equipements_resp_user"
+                    android:icon="@drawable/ic_menu_equipements"
+                    android:title="@string/menu_equipements" />
+                <item
+                    android:id="@+id/nav_horaires_resp_user"
+                    android:icon="@drawable/ic_menu_horaires"
+                    android:title="@string/menu_horaires" />
+                <item
+                    android:id="@+id/nav_planning_resp_user"
+                    android:icon="@drawable/ic_menu_planning"
+                    android:title="@string/menu_planning" />
+                <item
+                    android:id="@+id/nav_rapport_chantier_resp_user"
+                    android:icon="@drawable/ic_menu_rapports"
+                    android:title="@string/menu_rapports_chantiers" />
+                <item
+                    android:id="@+id/nav_rapport_vehicules_resp_user"
+                    android:icon="@drawable/ic_menu_vehicules"
+                    android:title="@string/menu_rapports_vehicules" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/menuGroupUtilisateur"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/nav_home_user"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_accueil" />
+        <item android:title="@string/menu_application">
+            <menu>
+                <item
+                    android:id="@+id/nav_decheteries"
+                    android:icon="@drawable/ic_menu_decheteries"
+                    android:title="@string/menu_decheteries" />
+                <item
+                    android:id="@+id/nav_depots_vente"
+                    android:icon="@drawable/ic_menu_depots_vente"
+                    android:title="@string/menu_depots_vente" />
+                <item
+                    android:id="@+id/nav_documents"
+                    android:icon="@drawable/ic_menu_documents"
+                    android:title="@string/menu_documents" />
+                <item
+                    android:id="@+id/nav_equipements"
+                    android:icon="@drawable/ic_menu_equipements"
+                    android:title="@string/menu_equipements" />
+                <item
+                    android:id="@+id/nav_horaires"
+                    android:icon="@drawable/ic_menu_horaires"
+                    android:title="@string/menu_horaires" />
+                <item
+                    android:id="@+id/nav_planning"
+                    android:icon="@drawable/ic_menu_planning"
+                    android:title="@string/menu_planning" />
+                <item
+                    android:id="@+id/nav_rapport_chantier"
+                    android:icon="@drawable/ic_menu_rapports"
+                    android:title="@string/menu_rapports_chantiers" />
+                <item
+                    android:id="@+id/nav_rapport_vehicules"
+                    android:icon="@drawable/ic_menu_vehicules"
+                    android:title="@string/menu_rapports_vehicules" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

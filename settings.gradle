@@ -1,0 +1,2 @@
+include ':app', ':weekview'
+rootProject.name='ArtemisPhone'

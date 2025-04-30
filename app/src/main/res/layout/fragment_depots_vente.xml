@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id = "@+id/rootviewDepotsVente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:weightSum="2">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewDepotsVente"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"/>
+
+    <ScrollView
+        android:id = "@+id/depotsVenteScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbTitre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="70dp"
+                android:text="@string/titre_2p" />
+
+            <EditText
+                android:id="@+id/etDepotsVenteTitre"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/lbTitre"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/lbAdresse"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adresse_2p"
+                android:layout_below="@id/etDepotsVenteTitre"
+                android:layout_toStartOf="@id/etDepotsVenteTitre"/>
+
+            <EditText
+                android:id="@+id/etDepotsVenteAdresse"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:layout_below="@id/etDepotsVenteTitre"
+                android:layout_toEndOf="@id/lbAdresse"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/lbHoraires"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horaires_2p"
+                android:layout_below="@id/etDepotsVenteAdresse"
+                android:layout_toStartOf="@id/etDepotsVenteAdresse"/>
+
+            <EditText
+                android:id="@+id/etDepotsVenteHoraires"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:layout_below="@id/etDepotsVenteAdresse"
+                android:layout_toEndOf="@id/lbHoraires"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/lbBlacklist"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blacklist_2p"
+                android:layout_below="@id/etDepotsVenteHoraires"
+                android:layout_toStartOf="@id/etDepotsVenteHoraires"/>
+
+            <Spinner
+                android:id="@+id/spDepotsVenteBlacklist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/etDepotsVenteHoraires"
+                android:layout_toEndOf="@id/lbBlacklist"/>
+
+            <TextView
+                android:id="@+id/lbCompteOuvert"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compte_2p"
+                android:layout_below="@id/spDepotsVenteBlacklist"
+                android:layout_toStartOf="@id/spDepotsVenteBlacklist"/>
+
+            <Spinner
+                android:id="@+id/spDepotsVenteCompte"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/spDepotsVenteBlacklist"
+                android:layout_toEndOf="@id/lbCompteOuvert"/>
+
+            <TextView
+                android:id="@+id/lbLatitude"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude_2p"
+                android:layout_below="@id/spDepotsVenteCompte"
+                android:layout_toStartOf="@id/spDepotsVenteCompte"/>
+
+            <TextView
+                android:id="@+id/tvLatitude"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:layout_below="@id/spDepotsVenteCompte"
+                android:layout_toEndOf="@id/lbLatitude"/>
+            <TextView
+                android:id="@+id/lbLongitude"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude_2p"
+                android:layout_below="@id/tvLatitude"
+                android:layout_toStartOf="@id/tvLatitude"/>
+
+            <TextView
+                android:id="@+id/tvLongitude"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvLatitude"
+                android:layout_toEndOf="@id/lbLongitude"/>
+
+            <Button
+                android:id="@+id/btUpdateDepotsVente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLongitude"
+                android:text="@string/mettre_a_jour"/>
+
+        </RelativeLayout >
+    </ScrollView>
+</LinearLayout>

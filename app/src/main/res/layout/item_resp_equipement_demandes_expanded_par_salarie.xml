@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="@string/taille_2p" />
+
+        <TextView
+            android:id="@+id/tvTaille"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="@string/quantit_possedee_2p" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btRemoveQtePossedee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/moins" />
+
+            <EditText
+                android:id="@+id/etQtePossedee"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:autofillHints=""
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="none"
+                android:textAlignment="center"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/btAddQtePossedee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/plus" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="@string/quantit_demandee_2p" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btRemoveQteDemandee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/moins" />
+
+            <EditText
+                android:id="@+id/etQteDemandee"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:autofillHints=""
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="none"
+                android:textAlignment="center"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/btAddQteDemandee"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/plus" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mettre_jour"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cloturer"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>

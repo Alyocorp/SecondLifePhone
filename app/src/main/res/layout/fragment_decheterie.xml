@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/rootviewDecheterie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:weightSum="2">
+
+    <fragment android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        />
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewDecheteries"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"/>
+
+    <ScrollView
+        android:id = "@+id/dechetScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbTitre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="70dp"
+                android:text="@string/titre_2p" />
+
+            <EditText
+                android:id="@+id/et_decheterie_titre"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/lbTitre"/>
+
+            <TextView
+                android:id="@+id/lbAdresse"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adresse_2p"
+                android:layout_below="@id/et_decheterie_titre"
+                android:layout_toStartOf="@id/et_decheterie_titre"/>
+
+            <EditText
+                android:id="@+id/et_decheterie_adresse"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:layout_below="@id/et_decheterie_titre"
+                android:layout_toEndOf="@id/lbAdresse"/>
+
+
+            <TextView
+                android:id="@+id/lbType"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type_2p"
+                android:layout_below="@id/et_decheterie_adresse"
+                android:layout_toStartOf="@id/et_decheterie_adresse"/>
+
+            <Spinner
+                android:id="@+id/sp_decheterie_type"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/et_decheterie_adresse"
+                android:layout_toEndOf="@id/lbType"/>
+
+
+            <TextView
+                android:id="@+id/lbHoraires"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horaires_2p"
+                android:layout_below="@id/sp_decheterie_type"
+                android:layout_toStartOf="@id/sp_decheterie_type"/>
+
+            <EditText
+                android:id="@+id/et_decheterie_horaires"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:layout_below="@id/sp_decheterie_type"
+                android:layout_toEndOf="@id/lbHoraires"/>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutPro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_decheterie_horaires"/>
+
+            <TextView
+                android:id="@+id/lbBarrieres"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/barriere_2p"
+                android:layout_below="@id/layoutPro"/>
+            <Spinner
+                android:id="@+id/sp_decheterie_barriere"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/layoutPro"
+                android:layout_toEndOf="@id/lbBarrieres"/>
+
+            <TextView
+                android:id="@+id/lbCarte"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/carte_2p"
+                android:layout_below="@id/sp_decheterie_barriere"
+                android:layout_toStartOf="@id/sp_decheterie_barriere"/>
+            <Spinner
+                android:id="@+id/sp_decheterie_carte"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/sp_decheterie_barriere"
+                android:layout_toEndOf="@id/lbCarte"/>
+
+            <TextView
+                android:id="@+id/lbBlacklist"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blacklist_2p"
+                android:layout_below="@id/sp_decheterie_carte"
+                android:layout_toStartOf="@id/sp_decheterie_carte"/>
+
+            <Spinner
+                android:id="@+id/sp_decheterie_blacklist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/sp_decheterie_carte"
+                android:layout_toEndOf="@id/lbBlacklist"/>
+
+            <TextView
+                android:id="@+id/lbLatitude"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude_2p"
+                android:layout_below="@id/sp_decheterie_blacklist"
+                android:layout_toStartOf="@id/sp_decheterie_blacklist"/>
+
+            <TextView
+                android:id="@+id/tvLatitude"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="0dp"
+                android:layout_below="@id/sp_decheterie_blacklist"
+                android:layout_toEndOf="@id/lbLatitude"/>
+            <TextView
+                android:id="@+id/lbLongitude"
+                android:minWidth="70dp"
+                android:gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude_2p"
+                android:layout_below="@id/tvLatitude"
+                android:layout_toStartOf="@id/tvLatitude"/>
+
+            <TextView
+                android:id="@+id/tvLongitude"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvLatitude"
+                android:layout_toEndOf="@id/lbLongitude"/>
+
+            <Button
+                android:id="@+id/bt_updateDechet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLongitude"
+                android:text="@string/mettre_a_jour"/>
+
+        </RelativeLayout >
+    </ScrollView>
+</LinearLayout>

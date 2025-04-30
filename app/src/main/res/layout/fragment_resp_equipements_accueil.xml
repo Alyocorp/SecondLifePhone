@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btEquipementDemandes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/demandes_salaries" />
+
+    <Button
+        android:id="@+id/btEquipementListe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/liste_equipements" />
+
+    <Button
+        android:id="@+id/btEquipementSuivi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/suivi_equipement_fourni" />
+
+</LinearLayout>

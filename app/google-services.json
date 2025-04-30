@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "421163681271",
+    "firebase_url": "https://carbide-datum-156913.firebaseio.com",
+    "project_id": "carbide-datum-156913",
+    "storage_bucket": "carbide-datum-156913.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421163681271:android:a156c06423a18723f55af2",
+        "android_client_info": {
+          "package_name": "fr.artemis.phone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421163681271-ctgih1i3a30kekki7ad929klvfvrjc79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCABSScTERRdLYZbpjvAdg4qRkx8wavyss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421163681271-ctgih1i3a30kekki7ad929klvfvrjc79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
